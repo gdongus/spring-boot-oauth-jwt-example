@@ -4,7 +4,7 @@
  curl -X POST --user 'clientName:clientPassword' -d 'grant_type=password&username=bob&password=test' http://localhost:9000/oauth/token
 
  # access resource using token
- curl -X GET  http://localhost:9000/users?access_token=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiY295byJdLCJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJnZXJyaXQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZm9vIjoiYmFyIiwiZXhwIjoxNDQzMDE3NDA3LCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjA3YzgzNzU3LTMwN2QtNGRiMS1iZTUzLWU4MTIwMDYwMTZlZiIsImNsaWVudF9pZCI6ImNveW8ifQ.BozK-tF6UNogG6xN4aQdQ4dPTiMBGkZOppdeCoCP9IA
+ curl -X GET  http://localhost:9000/users?access_token=
 
  # refresh token
- curl -X POST  --user 'clientName:clientPassword' -d 'grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsiY295byJdLCJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJnZXJyaXQiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZm9vIjoiYmFyIiwiYXRpIjoiMDdjODM3NTctMzA3ZC00ZGIxLWJlNTMtZTgxMjAwNjAxNmVmIiwiZXhwIjoxNDQ1NjA5MTA3LCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImp0aSI6IjRiODAzNmMxLTkxMGYtNGU0OC1hOWZkLTEwM2IzNDUwYjkzMiIsImNsaWVudF9pZCI6ImNveW8ifQ.TcwXOCd5YunqVek38Sfd5fnyrwcrJgPt6T32KxzVUlA' http://localhost:9000/oauth/token
+ curl -X POST  --user 'clientName:clientPassword' -d 'grant_type=refresh_token&refresh_token=' http://localhost:9000/oauth/token

@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
@@ -37,6 +38,7 @@ public class UserCredentials implements UserDetails {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@Getter(onMethod = @__(@org.codehaus.jackson.annotate.JsonIgnore))
+	@JsonBackReference
 	private User user;
 
 	@Column(name = "username")

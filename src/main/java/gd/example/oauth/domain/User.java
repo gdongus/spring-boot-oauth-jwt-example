@@ -1,5 +1,6 @@
 package gd.example.oauth.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 import org.codehaus.jackson.annotate.JsonIgnore;
@@ -29,6 +30,7 @@ public class User {
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@Getter(onMethod = @__(@JsonIgnore))
+	@JsonManagedReference
 	private UserCredentials credentials;
 
 	@Column(name = "email", nullable = false, unique = true)

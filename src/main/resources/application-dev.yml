@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    datasource:
+        dataSourceClassName: org.h2.jdbcx.JdbcDataSource
+        url: jdbc:h2:./data/db;DB_CLOSE_DELAY=-1
+        databaseName:
+        serverName:
+        username:
+        password:
+
+    batch:
+        job:
+          # Run Batch Jobs on startup
+            enabled: false
+
+
+security:
+  user:
+    password: password
+
+logging:
+  level:
+    org.springframework.security: DEBUG
